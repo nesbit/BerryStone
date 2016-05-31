@@ -43,9 +43,9 @@ def startBeacon(uri):
 	while k < len(uriString):
 		uriHex=str(uriHex + " "+"{0:02x}".format(ord(uriString[k])))
 		k=k+1
-		print ("debug " +str(k) + uriHex)
+	#	print ("debug " +str(k) + uriHex)
 	#chr() converts int to hex
-	str1 = "02 01 1a 03 03 aa fe 0f 16 aa fe "
+	str1 = "02 01 1a 03 03 aa fe "+str(hex(len(uriString)+7)[2:].zfill(2))+" 16 aa fe "
 	str2 = "10 ed " +urlScheme+""+ uriHex+" "+hex(thisE)[2:].zfill(2)
 	str3 = str1 + str2
 	print ("Length " + str(len(re.findall(r'\w+', str3))))
