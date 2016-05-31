@@ -1,5 +1,6 @@
 import binascii
 import re
+import os
 schemes = [
 	"http://www.",
 	"https://wwww.",
@@ -48,10 +49,12 @@ def startBeacon(uri):
 	str2 = "10 ed " +urlScheme+""+ uriHex+" "+hex(thisE)[2:].zfill(2)
 	str3 = str1 + str2
 	print ("Length " + str(len(re.findall(r'\w+', str3))))
+	
 	str3 = hex(len(re.findall(r'\w+', str3)))[2:].zfill(2) +" "+ str3
+	while len(re.findall(r'\w+', str3)) < 32: str3 = str3 + " 00"
 	#str3 = str3.replace("\\x", " ")
 	print ("Hello " + str3)
-	print (int(str3))
+	#print (int(str3))
 	os.system("sudo hcitool -i hci0 cmd 0x08 0x000a 00")
 #Set message
 	os.system("sudo hcitool -i hci0 cmd 0x08 0x0008 " + str3)
@@ -59,4 +62,4 @@ def startBeacon(uri):
 	os.system("sudo hcitool -i hci0 cmd 0x08 0x000a 01")
 #def broadcast(message):
 
-startBeacon("https://dempseys.com")
+startBeacon("https://ert.com")
