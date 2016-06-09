@@ -1,0 +1,1 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body><a href="https://docs.google.com/document/d/1WpC2AP-OxWSfFUAoPk_tBTewtUNFIldpLADFarZ9p9M/edit?usp=drive_web">https://docs.google.com/document/d/1WpC2AP-OxWSfFUAoPk_tBTewtUNFIldpLADFarZ9p9M/edit?usp=drive_web</a></body></html>
